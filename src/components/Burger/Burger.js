@@ -7,7 +7,7 @@ let num = 1;
 const burger = ({ ingredients }) => {
   let transformedIngredients = Object.keys(ingredients)
     .map((igKey) => {
-      console.log("heyyyyyy" + num++);
+      // console.log("heyyyyyy" + num++);
       return [...Array(ingredients[igKey])].map((_, i) => {
         return <BurgerIngredient key={igKey + i} type={igKey} />;
       });
