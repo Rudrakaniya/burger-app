@@ -14,9 +14,9 @@ class Orders extends Component {
     axios
       .get("/orders.json")
       .then((res) => {
-        console.log("res == " + res.data);
+        console.log(res.data);
         const fetchedOrders = [];
-        for (let key in res.data[key]) {
+        for (let key in res.data) {
           fetchedOrders.push({
             ...res.data[key],
             id: key,
@@ -41,6 +41,7 @@ class Orders extends Component {
             price={order.price}
           />
         ))}
+        {/* <Order /> */}
       </div>
     );
   }
